@@ -21,7 +21,7 @@ export class LoginComponent {
   login(): void {
     this.authService.login(this.username, this.password).subscribe({
       next: (response) => {
-        console.log(response);
+        // console.log(response);
         const token = response.data; // Substitua pela propriedade do token retornado pela sua API
         this.authService.saveToken(token);
         this.router.navigate(['/products']);

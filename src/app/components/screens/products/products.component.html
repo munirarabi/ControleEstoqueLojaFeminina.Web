@@ -1,6 +1,27 @@
 <h2>Lista de Produtos</h2>
-<ul>
-  <li *ngFor="let product of products">
-    <strong>{{ product.categoryName }}</strong> - {{ product.price | currency }}
-  </li>
-</ul>
+
+<p-table [value]="products" [tableStyle]="{'min-width': '60rem'}">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>ProductId</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Color Name</th>
+          <th>Supplier</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+      <tr>
+          <td>{{product.productId}}</td>
+          <td>{{product.categoryName}}</td>
+          <td>{{product.price | currency:'USD'}}</td>
+          <td>{{product.colorName}}</td>
+          <td>{{product.supplierName}}</td>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="summary">
+      <div class="flex align-items-center justify-content-between">
+          In total there are {{products ? products.length : 0 }} products.
+      </div>
+  </ng-template>
+</p-table>

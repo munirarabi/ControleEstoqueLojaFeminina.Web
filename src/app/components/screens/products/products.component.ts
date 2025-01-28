@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../../services/products.service';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../../interfaces/product';
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button'; // Importação do ButtonModule
+
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TableModule,ButtonModule],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
 })

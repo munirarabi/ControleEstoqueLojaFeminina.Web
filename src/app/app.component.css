@@ -1,0 +1,40 @@
+.custom-menubar {
+  background-color: #007ad9;
+  color: white;
+}
+
+.custom-menubar .p-menubar-button {
+  color: white;
+}
+
+.custom-sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+}
+
+.custom-sidebar h3 {
+  margin: 0;
+  padding: 1rem;
+  background-color: #007ad9;
+  color: white;
+}
+
+.custom-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-sidebar li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-sidebar li a {
+  text-decoration: none;
+  color: #007ad9;
+}
+
+.custom-sidebar li a:hover {
+  text-decoration: underline;
+}

@@ -1,3 +1,26 @@
-<h1>Menu</h1>
+<!-- Navbar -->
+<p-menubar [model]="items" styleClass="custom-menubar">
+  <button
+    pButton
+    type="button"
+    icon="pi pi-bars"
+    (click)="toggleSidebar()"
+    class="p-button-rounded p-button-text"
+  ></button>
+</p-menubar>
+
+<!-- Sidebar -->
+<p-sidebar
+  [(visible)]="sidebarVisible"
+  [baseZIndex]="10000"
+  styleClass="custom-sidebar"
+>
+  <h3>Menu Lateral</h3>
+  <ul>
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/products">Produtos</a></li>
+    <li><a routerLink="/settings">Configurações</a></li>
+  </ul>
+</p-sidebar>
 
 <router-outlet></router-outlet>

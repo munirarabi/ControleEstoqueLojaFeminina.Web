@@ -7,7 +7,16 @@
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      "url": "http://localhost:4200/",
+      "skipFiles": [
+        "node_modules/**",       // Ignora todas as bibliotecas de terceiros
+        "webpack://*/**",        // Ignora arquivos gerados pelo Webpack
+        "<anonymous>"            // Ignora funções anônimas
+      ],
+      "sourceMapPathOverrides": {
+      "webpack://*/src/*": "${workspaceFolder}/src/*", // Mapeia os arquivos TypeScript corretamente
+      "webpack:///*": "*"                              // Ignora arquivos gerados fora de `src`
+    }
     },
     {
       "name": "ng test",

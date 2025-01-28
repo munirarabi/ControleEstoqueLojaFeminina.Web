@@ -7,8 +7,8 @@ export interface Product {
   colorName: string;
   sizeId: number;
   sizeName: string;
-  supplierName: string;
   supplierId: number;
+  supplierName: string;
   supplierDescription: string;
   supplierAddres: string;
   supplierContact1: string;
