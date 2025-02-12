@@ -14,6 +14,10 @@ export class ProductsService {
 
   // Método para buscar todos os produtos
   getAllProducts(): Observable<ApiResponse<Product>> {
-    return this.http.get<ApiResponse<Product>>(`${this.apiUrl}/GetAllProducts`);
+    return this.http.get<ApiResponse<Product>>(`${this.apiUrl}/GetAllProduct`);
   }
+
+  deleteProduct(productId: number): Observable<ApiResponse<null>> {
+    return this.http.delete<ApiResponse<null>>(`${this.apiUrl}/DeleteProduct?idProduct=${productId}`);
+  }  
 }
